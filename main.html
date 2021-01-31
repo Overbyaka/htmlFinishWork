@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceAnimation</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="space.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="logotype" onclick="slowScroll('#top')">
+            <span>SpaceAnimation</span>
+        </div>
+        <div id="navigation">
+            <a href="history.html" title="История">История</a>
+            <a href="types.html" title="Виды">Виды</a>
+            <a href="professions.html" title="Профессии">Профессии</a>
+            <a href="tutorial.html" title="Tutorial">Tutorial</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Анимация</h1>
+        <h3>это не просто искусство!</h3>
+    </div>
+
+    <div id="main">
+        <h1>Что здесь можно прочесть?</h1>
+    </div>
+
+    <div id = "information">
+        <div class = "img">
+            <img src="https://i.pinimg.com/736x/6d/90/a7/6d90a72ccb0a132dd3cee288b7da530d.jpg" alt="">
+            <h2>История</h2>
+            <span>В данном разделе вы сможете ознакомиться с удивительной и интересной историей анимации. Как она зародилась, развивалась и существует в нынешнее время? Здесь вы узнаете все ответы на данные вопросы!</span>
+        </div>
+        <div class = "img">
+            <img src="https://i.pinimg.com/originals/56/12/71/561271fb97898fb9b8a82b3e32147b04.jpg" alt="">
+            <h2>Виды</h2>
+            <span>Спустя многочисленное время анимация развилась настолько, что ее можно подразделить на виды! Здесь можно поближе познакомиться с каждым из видов анимации!</span>
+        </div>
+        <div class = "img">
+            <img src="https://yt3.ggpht.com/a/AATXAJy4NbR8Zttxbk4pULEZoMnm-UOKEhfx_Xv17pqdbA=s900-c-k-c0xffffffff-no-rj-mo" alt="">
+            <h2>Профессии</h2>
+            <span>Создание анимации - кропотливая работа. При ее создании участвует целая группа людей! Здесь мы можем узнать профессии, связанные со созданием анимации!</span>
+        </div>
+        <div class = "img">
+            <img src="https://d2.alternativeto.net/dist/s/62833767-d609-e411-9cc8-002590a05f5f_2_full.jpg?format=jpg&width=1200&height=1200&mode=crop" alt="">
+            <h2>Tutorial</h2>
+            <span>Как создать свою первую анимацию? Нужны ли для этого особые навыки? Нет! Достаточно начать! Здесь описывается процесс создания простой анимации.</span>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function slowScroll(id){
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+        $(document).on("scroll", function (){
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+        });
+    </script>  
+</body>
+</html>
